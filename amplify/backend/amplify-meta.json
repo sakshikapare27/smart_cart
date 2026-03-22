@@ -1,0 +1,133 @@
+{
+  "providers": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-shoppingcarts-dev-22f32-authRole",
+      "UnauthRoleArn": "arn:aws:iam::851725171907:role/amplify-shoppingcarts-dev-22f32-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::851725171907:role/amplify-shoppingcarts-dev-22f32-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-shoppingcarts-dev-22f32-deployment",
+      "UnauthRoleName": "amplify-shoppingcarts-dev-22f32-unauthRole",
+      "StackName": "amplify-shoppingcarts-dev-22f32",
+      "StackId": "arn:aws:cloudformation:us-east-1:851725171907:stack/amplify-shoppingcarts-dev-22f32/8ea97490-0e62-11f1-b26f-0eab002a9f57",
+      "AmplifyAppId": "d3fj9ob2taocej",
+      "AuthTriggerTemplateURL": "https://s3.amazonaws.com/amplify-shoppingcarts-dev-22f32-deployment/amplify-cfn-templates/auth/auth-trigger-cloudformation-template.json"
+    }
+  },
+  "hosting": {
+    "amplifyhosting": {
+      "service": "amplifyhosting",
+      "providerPlugin": "awscloudformation",
+      "type": "manual",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-shoppingcarts-dev-22f32-deployment/amplify-cfn-templates/hosting/amplifyhosting-template.json",
+        "logicalId": "hostingamplifyhosting"
+      },
+      "lastPushTimeStamp": "2026-02-21T18:55:25.956Z",
+      "output": {},
+      "lastPushDirHash": "txsXPn5Ko6w+3Inys3z2k63GyNU="
+    }
+  },
+  "auth": {
+    "shoppingcarts1c081e4a": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false,
+      "frontendAuthConfig": {
+        "socialProviders": [],
+        "usernameAttributes": [
+          "PHONE_NUMBER"
+        ],
+        "signupAttributes": [
+          "EMAIL"
+        ],
+        "passwordProtectionSettings": {
+          "passwordPolicyMinLength": 8,
+          "passwordPolicyCharacters": []
+        },
+        "mfaConfiguration": "OFF",
+        "mfaTypes": [
+          "SMS"
+        ],
+        "verificationMechanisms": [
+          "EMAIL"
+        ]
+      },
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-shoppingcarts-dev-22f32-deployment/amplify-cfn-templates/auth/shoppingcarts1c081e4a-cloudformation-template.json",
+        "logicalId": "authshoppingcarts1c081e4a"
+      },
+      "lastPushTimeStamp": "2026-02-21T18:55:32.232Z",
+      "output": {
+        "CreatedSNSRole": "arn:aws:iam::851725171907:role/sns1c081e4a22f32-dev",
+        "UserPoolId": "us-east-1_DJqfKeKpW",
+        "AppClientIDWeb": "34u3pi6g2meulkp9jj2rgvv6an",
+        "AppClientID": "57v3piq72mli9c3vq3f3nt4pjh",
+        "IdentityPoolId": "us-east-1:24724877-60ea-4643-b8b8-899c3532b36e",
+        "UserPoolArn": "arn:aws:cognito-idp:us-east-1:851725171907:userpool/us-east-1_DJqfKeKpW",
+        "IdentityPoolName": "shoppingcarts1c081e4a_identitypool_1c081e4a__dev",
+        "UserPoolName": "shoppingcarts1c081e4a_userpool_1c081e4a"
+      },
+      "lastPushDirHash": "5a11AKoSY4Yt0gg94Sj+FaCM/Q8="
+    }
+  },
+  "function": {
+    "addItemFunction": {
+      "service": "Lambda",
+      "providerPlugin": "awscloudformation",
+      "build": true,
+      "dependsOn": [],
+      "lastBuildTimeStamp": "2026-02-21T18:55:30.644Z",
+      "lastBuildType": "PROD",
+      "lastPackageTimeStamp": "2026-02-21T18:55:30.679Z",
+      "distZipFilename": "addItemFunction-37725235773776646c37-build.zip",
+      "s3Bucket": {
+        "deploymentBucketName": "amplify-shoppingcarts-dev-22f32-deployment",
+        "s3Key": "amplify-builds/addItemFunction-37725235773776646c37-build.zip"
+      },
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-shoppingcarts-dev-22f32-deployment/amplify-cfn-templates/function/addItemFunction-cloudformation-template.json",
+        "logicalId": "functionaddItemFunction"
+      },
+      "lastPushTimeStamp": "2026-02-21T18:55:31.751Z"
+    },
+    "addRemoveCartItem": {
+      "service": "Lambda",
+      "providerPlugin": "awscloudformation",
+      "build": true,
+      "dependsOn": [],
+      "lastBuildTimeStamp": "2026-02-21T18:55:30.911Z",
+      "lastBuildType": "PROD",
+      "lastPackageTimeStamp": "2026-02-21T18:55:30.924Z",
+      "distZipFilename": "addRemoveCartItem-37725235773776646c37-build.zip",
+      "s3Bucket": {
+        "deploymentBucketName": "amplify-shoppingcarts-dev-22f32-deployment",
+        "s3Key": "amplify-builds/addRemoveCartItem-37725235773776646c37-build.zip"
+      },
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-shoppingcarts-dev-22f32-deployment/amplify-cfn-templates/function/addRemoveCartItem-cloudformation-template.json",
+        "logicalId": "functionaddRemoveCartItem"
+      },
+      "lastPushTimeStamp": "2026-02-21T18:55:32.224Z"
+    },
+    "sendCustomCode": {
+      "service": "Lambda",
+      "providerPlugin": "awscloudformation",
+      "build": true,
+      "dependsOn": [],
+      "lastBuildTimeStamp": "2026-02-21T18:55:31.156Z",
+      "lastBuildType": "PROD",
+      "lastPackageTimeStamp": "2026-02-21T18:55:31.165Z",
+      "distZipFilename": "sendCustomCode-684341762f6b57424762-build.zip",
+      "s3Bucket": {
+        "deploymentBucketName": "amplify-shoppingcarts-dev-22f32-deployment",
+        "s3Key": "amplify-builds/sendCustomCode-684341762f6b57424762-build.zip"
+      },
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-shoppingcarts-dev-22f32-deployment/amplify-cfn-templates/function/sendCustomCode-cloudformation-template.json",
+        "logicalId": "functionsendCustomCode"
+      },
+      "lastPushTimeStamp": "2026-02-21T18:55:32.220Z"
+    }
+  }
+}
